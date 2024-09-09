@@ -1,3 +1,78 @@
+.Websitebackground{
+background-color: #0D0E11;
+top: 0;
+bottom:0;
+right: 0;
+left: 0;
+position: sticky;
+}
+.Navigationbar{
+  height: 80px;
+  position: relative;
+}
+.Navigationtext{
+color: #FFFFFF;
+font-family: 'Nunito';
+white-space: nowrap;
+font-size: 1.4vw;
+}
+.Brandlogo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  }
+
+
+
+
+
+.testingclass{
+position: relative;
+top: 20px;
+margin-right: 150px;
+
+
+}
+
+.testingclass:hover{
+  background-color: lightblue;
+  border-bottom:  2px solid #32B07A; 
+}
+.testing{
+  
+  border-bottom: 2px solid #32B07A; 
+  stroke-width: 2px;
+  }
+
+
+
+
+
+  .Containerchecker{
+background-color:#32B07A ;
+margin-right: 80px;
+margin-left: 80px;
+margin-top: 20px;
+height: 3px;
+
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
@@ -14,7 +89,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0f9716;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

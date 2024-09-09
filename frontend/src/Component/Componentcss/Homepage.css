@@ -1,0 +1,47 @@
+     
+
+
+.container {
+  position: relative;
+  margin-top: 50px;
+  
+}
+
+
+.responsive {
+width: 100%;
+height: auto;
+}
+
+
+
+
+
+.top-lefttext {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    left: 45%;
+}
+
+.responsivebutton {
+  width: 20%;
+  height: auto;
+  }
+.top-leftbutton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    left: 33%;
+}
+
+
+  .Sectiontext{
+    color: #ffffff;
+    font-family: 'Nunito';
+    white-space: nowrap;
+    font-size: 3vw;
+  }
+
