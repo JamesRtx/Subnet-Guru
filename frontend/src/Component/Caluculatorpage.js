@@ -23,12 +23,165 @@ const onChangeNummberofhost =e => {
     setNumberofrecenthost(number)
 }
 const handleSubmitofnumberofhost = () => {
-    const Subnetmask = "0.0.0.0"
-    while (1<= 255){
+
+    let wacknumber=getbinarysubnetmaskbyNumberofhost(Numberofhost)
+
+    let Subnetmaskinbinary= convertwacktoSubnetmaskbinary(wacknumber)
+
+    let Subnetmaskindecimalform=convertbinarysubnetmakstodecimal(Subnetmaskinbinary)
+    convertdecimalsubnetmakstobinary("255.255.255.252")
+    
+    console.log(Subnetmaskindecimalform)
+
+    
+}
+function convert_Cidrnotaiontosubnetmask(Subnetmask){
+
+}
+function convertwacktoSubnetmaskbinary (bits){
+// converts wack to subnetmask binary
+let Subnetmaskinbinaryform = ""
+let counter=0;
+let zerotime= false;
+for(let i =1 ; i<=32; i++){
+    counter+=1;
+
+    if(zerotime==false){
+    Subnetmaskinbinaryform+="1"
+    }
+    else{
+Subnetmaskinbinaryform+="0"
+    }
+    
+
+    if(counter==8 && i!=32){
+        Subnetmaskinbinaryform+="."
+            counter=0;
+        }
+
+        if(bits==i){      
+            zerotime=true
+        }
+   
+}
+
+return Subnetmaskinbinaryform
+
+}
+function getbinarysubnetmaskbyNumberofhost (Numberofhost){
+// find the most effeicent wack number
+let bits = 30;
+let target = false;
+let mostefficentnumber= 0;
+
+    for(let i =1; i<=4 ; i++){
+       if(target==true){
+        break;
+       }
+        let j = 1
+        if(i==1){
+            j=3
+        }
+        while (j<=8){
+            let number =  (2)**(32-bits)
+           if(number>Numberofhost){
+            mostefficentnumber=number
+            console.log(mostefficentnumber)
+            target=true
+            break
+           }
+            bits=bits-1;
+            j++;
+        }
 
     }
-console.log(Numberofhost)
+
+   let wacknumber= bits
+
+  return wacknumber;
 }
+
+
+
+function convertbinarysubnetmakstodecimal (Subnetmask){
+    let tempnumber=0;
+    let Subnetmaskindecimalform="";
+    let counterhelper= 1;
+    let counterhelper1= 1;
+    for (const key in Subnetmask) {
+  
+        if(Subnetmask[key] == "1" || counterhelper1>27 && Subnetmask[key]!="0"){
+            tempnumber+= 2**(8-counterhelper)
+            counterhelper++;
+            if(counterhelper1>27){
+                console.log(tempnumber,counterhelper,Subnetmask[key])
+            }
+        }
+        
+
+        if(Subnetmask[key]=="."){  
+            Subnetmaskindecimalform+=tempnumber+".";
+            tempnumber=0;
+            counterhelper=1
+            console.log("This should haopepn right before",tempnumber,key)
+        }
+        counterhelper1++
+    }
+    return Subnetmaskindecimalform+=tempnumber    
+}
+
+function convertdecimalsubnetmakstobinary (Subnetmask){
+    let tempaccumulator="";
+    let Subnetmaskinbinaryform="";
+    let counterhelper= 1;
+    let counterhelper1= 1;
+    for (const key in Subnetmask) {
+
+        
+        tempaccumulator+=Subnetmask[key]
+
+        // if(Subnetmask[key] == "2" || counterhelper1>27 && Subnetmask[key]!="0"){
+        //     tempnumber+= 2**(8-counterhelper)
+        //     counterhelper++;
+        //     if(counterhelper1>27){
+        //         console.log(tempnumber,counterhelper,Subnetmask[key])
+        //     }
+        // }
+       
+  
+        if(Subnetmask[key]=="." || (Subnetmask.length-1)==key ){  
+            console.log(tempaccumulator)
+            
+            
+
+            for(let i =1 ; i<=8;i++){
+                let divider = tempaccumulator/2**(8-i)
+                
+                if(divider>0){
+                    tempaccumulator = tempaccumulator-2**(8-i)
+                    
+                }
+                if(divider<=0){
+                    console.log("less than zero")
+                }
+                console.log("this hsould work please",divider, i)
+
+            }
+
+
+            tempaccumulator=""
+    
+        }
+        
+        counterhelper1++
+    }
+
+    return    
+}
+
+
+
+
 
 
 return (
@@ -99,13 +252,15 @@ To find the broadcast address for a given subnet, click on the form and enter th
 To determine the subnet size in CIDR notation, click on the form and enter the IP address and subnet mask (e.g., /24 or /28). The tool will then display the subnet size in CIDR notation, helping you understand the network's capacity and range.
 </p> */}
 
-<div className='lineardivider'></div>
+{/* <div className='lineardivider'></div>
 <h2 className='Subsectiontext'>Same Subnet Checker/Same Network Identifier</h2>
 <p className='paragraphtext'>
 To determine if two IP addresses are in the same subnet, click on the form and enter the IP address, subnet mask, and the second IP address. The tool will then check and display whether both IP addresses belong to the same subnet.
 
 
-</p>
+</p> */}
+
+
 
 </div>
 
