@@ -16,6 +16,8 @@ font-family: 'Nunito';
 white-space: nowrap;
 font-size: 1.4vw;
 }
+
+
 .Brandlogo {
   width: 100%;
   max-width: 150px;
@@ -35,9 +37,11 @@ margin-right: 150px;
 }
 
 .testingclass:hover{
-  background-color: lightblue;
-  border-bottom:  2px solid #32B07A; 
+  position: relative;
+  background-color:#32B07A;
+  border-radius: 10px;
 }
+
 .testing{
   
   border-bottom: 2px solid #32B07A; 
@@ -52,7 +56,7 @@ margin-right: 150px;
 background-color:#32B07A ;
 margin-right: 80px;
 margin-left: 80px;
-margin-top: 20px;
+margin-top: 8px;
 height: 3px;
 
     }

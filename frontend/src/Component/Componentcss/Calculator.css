@@ -23,7 +23,7 @@
 
     margin-top: 2%;
   }
-.lineardivider{
+  .lineardivider{
     background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
     margin-right: 80px;
     margin-left: 80px;
@@ -31,14 +31,20 @@
     height: 3px;
 }
 
-.container {
-  position: relative;
-  margin-top: 50px;
-  
-}
-.responsive {
-  width: 100%;
-  height: auto;
+.ContainerforForm{
+    color: #FFFFFF;
+    font-family: 'Nunito';
+    white-space: nowrap;
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 80%;
+  }
+  .Containerfordisplay{
+    color: #FFFFFF;
+    font-family: 'Nunito';
+    white-space: nowrap;
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 80%;
   }
   
-
