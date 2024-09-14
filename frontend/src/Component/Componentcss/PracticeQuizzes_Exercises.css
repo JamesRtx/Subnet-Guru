@@ -42,3 +42,26 @@
   }
   
 
+  .ContainerforQuestion{
+    color: #0D0E11;
+    font-family: 'Nunito';
+    white-space: nowrap;
+    font-size: 2vw;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    background-color: #34FEB5;
+    border-radius: 10px;
+  }
+  .Submitbutton{
+    border: 2px solid transparent;
+    background: 
+    linear-gradient(#151515,#151515) padding-box,
+    linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%) border-box;
+    font-size: 1.3vw;
+    width: 15%;
+    margin-left: 84%;
+    margin-top: 5%;
+  }
+
+  
