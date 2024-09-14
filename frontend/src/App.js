@@ -11,6 +11,7 @@ import Brandlogo from './images/logos/Navbrand.png'
 import Homepage from './Component/Homepage.js';
 import Calculatorpage from './Component/Caluculatorpage.js';
 import Teachingpage from './Component/TeachingPage.js';
+import PracticeQuizzes_Exercises from './Component/PracticeQuizzes_Exercises.js'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
   <Nav className="ml-auto">
   <Nav.Link as={NavLink} to={"/Calculator-Page"}  className="testingclass"> <h4 className='Navigationtext'>Calculator page</h4></Nav.Link>  
   <Nav.Link as={NavLink} to={"/Teaching-Page"}   className="testingclass">  <h4 className='Navigationtext'>Teaching Page</h4></Nav.Link> 
-  <Nav.Link as={NavLink} to={"/Home-Page"}   className="testingclass">  <h4 className='Navigationtext'>Practice Quizzes/Exercises</h4></Nav.Link> 
+  <Nav.Link as={NavLink} to={"/PracticeQuizzes_Exercises"}   className="testingclass">  <h4 className='Navigationtext'>Practice Quizzes/Exercises</h4></Nav.Link> 
   <Nav.Link as={NavLink} to={"/Home-Page"}   className="testingclass">  <h4 className='Navigationtext'>FAQ/Glossary</h4></Nav.Link> 
 
   </Nav>
@@ -45,6 +46,7 @@ function App() {
  <Route path="/Home-Page" element={<Homepage/>}></Route>
  <Route path="/Calculator-Page" element={<Calculatorpage/>}></Route>
  <Route path="/Teaching-Page" element={<Teachingpage/>}></Route>
+ <Route path="/PracticeQuizzes_Exercises" element={<PracticeQuizzes_Exercises/>}> </Route>
  </Routes>
 
 

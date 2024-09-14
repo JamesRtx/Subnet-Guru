@@ -39,12 +39,27 @@
     margin-left: 5%;
     margin-right: 80%;
   }
-  .Containerfordisplay{
+
+  .ContainerfordisplayAnwser{
     color: #FFFFFF;
     font-family: 'Nunito';
     white-space: nowrap;
-    font-size: 1.3vw;
+    font-size: 1.7vw;
     margin-left: 5%;
-    margin-right: 80%;
+    margin-right: 10%;
+    background-color: #32B07A;
+    border-radius: 10px;
   }
+
+  .Submitbutton{
+    border: 2px solid transparent;
+    border-radius: 100px;
+    background: 
+    linear-gradient(#151515,#151515) padding-box,
+    linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%) border-box;
+    font-size: 1.3vw;
+    width: 60%;
+  }
+
+  
   
