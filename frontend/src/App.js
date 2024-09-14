@@ -12,6 +12,7 @@ import Homepage from './Component/Homepage.js';
 import Calculatorpage from './Component/Caluculatorpage.js';
 import Teachingpage from './Component/TeachingPage.js';
 import PracticeQuizzes_Exercises from './Component/PracticeQuizzes_Exercises.js'
+import FAQ from './Component/FAQpage.js'
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
   <Nav.Link as={NavLink} to={"/Calculator-Page"}  className="testingclass"> <h4 className='Navigationtext'>Calculator page</h4></Nav.Link>  
   <Nav.Link as={NavLink} to={"/Teaching-Page"}   className="testingclass">  <h4 className='Navigationtext'>Teaching Page</h4></Nav.Link> 
   <Nav.Link as={NavLink} to={"/PracticeQuizzes_Exercises"}   className="testingclass">  <h4 className='Navigationtext'>Practice Quizzes/Exercises</h4></Nav.Link> 
-  <Nav.Link as={NavLink} to={"/Home-Page"}   className="testingclass">  <h4 className='Navigationtext'>FAQ/Glossary</h4></Nav.Link> 
+  <Nav.Link as={NavLink} to={"/FAQ"}   className="testingclass">  <h4 className='Navigationtext'>FAQ/Glossary</h4></Nav.Link> 
 
   </Nav>
   
@@ -47,6 +48,8 @@ function App() {
  <Route path="/Calculator-Page" element={<Calculatorpage/>}></Route>
  <Route path="/Teaching-Page" element={<Teachingpage/>}></Route>
  <Route path="/PracticeQuizzes_Exercises" element={<PracticeQuizzes_Exercises/>}> </Route>
+ <Route path="/FAQ" element={<FAQ/>}> </Route>
+
  </Routes>
 
 
@@ -55,22 +58,3 @@ function App() {
 }
 
 export default App;
-
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          
-        </a>
-
-        fadfd
-      </header> */}

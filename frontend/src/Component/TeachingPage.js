@@ -22,7 +22,7 @@ const Teachingpage =() => {
 <h1 className='Headertext'>Relax, it’s only ONES and ZEROS!</h1>
 <br/>
 <br/>
-<div className='lineardivider'>
+<div className='lineardividerteaching'>
 </div>
 
 <h2 className='Subsectiontext'>Basic understanding of Ipv4 addressing</h2>
@@ -44,7 +44,7 @@ const Teachingpage =() => {
     <div style={{textAlign:"center"}}>192.168.1.1</div>
       </p>
 
-<div className='lineardivider'>
+<div className='lineardividerteaching'>
 </div>
 <h2 className='Subsectiontext'>Basic understanding of Subnet mask and Their Purpose</h2>
 <p className='paragraphtext'>
@@ -68,7 +68,7 @@ To illustrate:
     </p>
 
 
-    <div className='lineardivider'>
+    <div className='lineardividerteaching'>
     </div>
     <h2 className='Subsectiontext'>Classful IP Addressing</h2>
         <p className='paragraphtext'>
@@ -113,7 +113,7 @@ To illustrate:
     </ul> 
 
         </p>
-<div className='lineardivider'>
+<div className='lineardividerteaching'>
     </div>
     <h2 className='Subsectiontext'>Subnetting with Classless Inter-Domain Routing (CIDR)</h2>
     <p className='paragraphtext'>
@@ -154,7 +154,7 @@ To illustrate :
 
 
 
-
+<br/>
 
     </div>);
 }

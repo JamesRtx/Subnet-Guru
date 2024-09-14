@@ -165,7 +165,7 @@ return (
 <br/>
 {/* Host to subnet */}
 {/* No1 */}
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>Host-to-Subnet Calculator</h2>
 <p className='paragraphtext'>
 Enter the number of usable hosts you need, and the tool will display the different subnet mask options that may fit your requirement, along with the most efficient one.
@@ -186,7 +186,7 @@ Enter the number of usable hosts you need, and the tool will display the differe
                 </div>
     </Form.Group>
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitforHosttoSubnetCalculator}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitforHosttoSubnetCalculator}>
              Submit
            </Button>
 </Form>
@@ -228,7 +228,7 @@ Enter the number of usable hosts you need, and the tool will display the differe
 
 {/* No2-------------------- */}
 
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>Host Range & Usability Checker</h2>
 <p className='paragraphtext'>
 To determine the minimum number of hosts and the range of usable IP addresses, please click on the form and enter the IP address and subnet mask (e.g., /24). The tool will then display the minimum number of usable hosts and the range of IP addresses available within the specified subnet.</p>
@@ -260,7 +260,7 @@ To determine the minimum number of hosts and the range of usable IP addresses, p
 </Form.Group>
 
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitofHostRangeUsabilityChecker}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitofHostRangeUsabilityChecker}>
              Submit
            </Button>
 </Form>
@@ -290,7 +290,7 @@ To determine the minimum number of hosts and the range of usable IP addresses, p
 
 {/* No.3 --------------------------------------------------------*/}
 
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>Broadcast Address Calculator</h2>
 <p className='paragraphtext'>
 To find the broadcast address for a given subnet, click on the form and enter the IP address and subnet mask (e.g., /24). The tool will then calculate and display the broadcast address for the specified subnet.
@@ -323,7 +323,7 @@ To find the broadcast address for a given subnet, click on the form and enter th
              </div>
 </Form.Group>
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitBroadcastAddressCalculator}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitBroadcastAddressCalculator}>
              Submit
            </Button>
 </Form>
@@ -348,7 +348,7 @@ To find the broadcast address for a given subnet, click on the form and enter th
 
 {/* No.4 --------------------------------------------------------*/}
 
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>CIDR Notation Finder</h2>
 <p className='paragraphtext'>
 To determine the subnet size in CIDR notation, click on the form and enter the subnet mask (e.g., /24 or /28). The tool will then display the subnet size in CIDR notation, helping you understand the network's capacity and range.
@@ -369,7 +369,7 @@ To determine the subnet size in CIDR notation, click on the form and enter the s
              </div>
 </Form.Group>
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitCIDRNotationFinder}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitCIDRNotationFinder}>
              Submit
            </Button>
 </Form>
@@ -393,7 +393,7 @@ To determine the subnet size in CIDR notation, click on the form and enter the s
 
 {/* No.5 --------------------------------------------------------*/}
 
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>Same Subnet Checker/Same Network Identifier</h2>
 <p className='paragraphtext'>
 To determine if two IP addresses are in the same subnet, click on the form and enter the IP address, subnet mask, and the second IP address. The tool will then check and display whether both IP addresses belong to the same subnet.
@@ -440,7 +440,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
 </Form.Group>
 
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitSameNetworkIdentifier}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitSameNetworkIdentifier}>
              Submit
            </Button>
 </Form>
@@ -463,7 +463,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
 (<div></div>)    }
 
 
-<div className='lineardivider'></div>
+<div className='lineardividercalc'></div>
 <h2 className='Subsectiontext'>IP Network Identifier</h2>
 <p className='paragraphtext'>
 To determine the network ID, please click on the form and enter the IP address along with the subnet mask or CIDR notation (e.g., 255.255.255.0 or /24). Once you submit the form, the tool will calculate and display the network ID associated with the provided IP address and subnet mask.
@@ -498,7 +498,7 @@ To determine the network ID, please click on the form and enter the IP address a
              </div>
 </Form.Group>
 <br/>
-<Button  className='Submitbutton' variant="primary" onClick={handleSubmitNetworkIdentifier}>
+<Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitNetworkIdentifier}>
              Submit
            </Button>
 </Form>

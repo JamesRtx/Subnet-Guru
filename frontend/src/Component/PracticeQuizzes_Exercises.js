@@ -12,10 +12,15 @@ import Button from 'react-bootstrap/Button';
 import QuestionsAndAnswer from './Questionandanswer';
 const PracticeQuizzes_Exercises = () => {
 
-const [ShowAnwser,setShowAnwser] =  useState(false)
+const [Answerlist,setAnwserlist] = useState([0,0,0,0,0,0,0,0])
 
-const OnchangeShowAnwser = () => {   
-    setShowAnwser(true)
+const OnchangeShowAnwser = (id) => {   
+    let count=0;
+    let copyarray=[0,0,0,0,0,0,0,0]    
+
+            copyarray[id]=1;
+            setAnwserlist(copyarray)
+
 }
 
     return(<div>
@@ -23,7 +28,7 @@ const OnchangeShowAnwser = () => {
         
         <br/>
         <br/>
-        <div className='lineardivider'></div>
+        <div className='lineardividerQuiz'></div>
         {QuestionsAndAnswer.map(Quizz => {
             return (
             
@@ -48,9 +53,11 @@ const OnchangeShowAnwser = () => {
     
 
     <br/>
+    <Button  className='Submitbutton' variant="primary"  onClick={()=>{OnchangeShowAnwser(Quizz.id)}} >
+             Answer?
+           </Button>
 
-
-           {ShowAnwser ? (<div>{Quizz.answer}</div>):(<div></div>)}  
+           {Answerlist[Quizz.id] ? (<div style={{color:"white" , whiteSpace:"pre-line"}}>{Quizz.answer}</div>):(<div></div>)}  
 
             </div>     
 
@@ -58,9 +65,7 @@ const OnchangeShowAnwser = () => {
         })}
         
 
-        <Button  className='Submitbutton' variant="primary"  onClick={OnchangeShowAnwser} >
-             Answer?
-           </Button>
+
         
         </div>)
 }

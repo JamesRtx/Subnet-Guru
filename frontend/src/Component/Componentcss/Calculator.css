@@ -23,11 +23,12 @@
 
     margin-top: 2%;
   }
-  .lineardivider{
+  .lineardividercalc{
     background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
     margin-right: 80px;
     margin-left: 80px;
-    margin-top: 20px;
+    margin-top: 1%;
+    margin-bottom: 5%;
     height: 3px;
 }
 
@@ -44,14 +45,14 @@
     color: #FFFFFF;
     font-family: 'Nunito';
     white-space: nowrap;
-    font-size: 1.7vw;
+    font-size: 1.9vw;
     margin-left: 5%;
     margin-right: 10%;
     background-color: #32B07A;
     border-radius: 10px;
   }
 
-  .Submitbutton{
+  .Submitbuttoncalc{
     border: 2px solid transparent;
     border-radius: 100px;
     background: 

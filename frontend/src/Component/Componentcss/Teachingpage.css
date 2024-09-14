@@ -23,12 +23,15 @@
 
     margin-top: 2%;
   }
-.lineardivider{
-    background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 20px;
-    height: 3px;
+
+.lineardividerteaching{
+  background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  height: 3px;
+
 }
 
 .container {
