@@ -1,4 +1,4 @@
-.Headertext{
+.HeadertextCalculator{
     color: #FFFFFF;
     font-family: 'Nunito';
     white-space: nowrap;
@@ -6,7 +6,7 @@
     margin-left: 5%;
     margin-top: 5%;
   }
-  .Subsectiontext{
+  .Subsectiontextcalc{
     color: #32B07A;
     font-family: 'Nunito';
     white-space: nowrap;
@@ -14,7 +14,7 @@
     margin-left: 5%;
     margin-top: 2%;
   }
-.paragraphtext{
+.paragraphtextcalc{
     color: #FFFFFF;
     font-family: 'Nunito';
     font-size: 1.8vw;
@@ -51,7 +51,11 @@
     background-color: #32B07A;
     border-radius: 10px;
   }
+  .ContainerfordisplayAnwserHeading{
+    font-size: 1.8vw;
+    margin-left: 2%;
 
+  }
   .Submitbuttoncalc{
     border: 2px solid transparent;
     border-radius: 100px;
@@ -64,3 +68,62 @@
 
   
   
+  .error{
+    color: red;
+    font-size: 2vw;
+    
+  }
+
+  @media (max-width: 480px) {
+
+    .HeadertextCalculator{
+      
+      font-size: 9vw;
+      white-space: normal;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .lineardividercalc{
+      margin-right: 0%;
+     margin-left: 0%
+    }
+    .Subsectiontextcalc{
+      font-size: 8vw;
+      white-space: normal;
+      margin-left: 0%;
+      margin-top: 0%;
+    }
+    .paragraphtextcalc{
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 5vw;
+      white-space: pre-wrap;
+    
+    }
+    .ContainerforForm{
+      margin-left: 0%;
+      margin-right: 50%;
+      font-size: 5vw;
+    }
+    .Submitbuttoncalc{
+      font-size: 5vw;
+      width: 60%;
+    }
+    .error{
+      font-size: 5vw;
+      white-space: normal;
+    }
+    .ContainerfordisplayAnwser{
+      margin-left: 0%;
+      margin-right: 0%;
+      font-size: 5vw;
+      white-space: inherit;
+
+    }
+    .ContainerfordisplayAnwserHeading{
+      
+      font-size: 5vw;
+      white-space: inherit;
+    }
+
+  }

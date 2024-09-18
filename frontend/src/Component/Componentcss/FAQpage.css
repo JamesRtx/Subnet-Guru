@@ -52,3 +52,28 @@
     white-space: pre-line;
 
   }
+
+  @media (max-width: 480px) {
+    .Headertext{
+      font-size: 9vw;
+      white-space: normal;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .lineardivider{
+      margin-right: 0%;
+     margin-left: 0%
+    }
+    .ContainerforFAQ{
+      margin-bottom: 5%;
+      margin-left: 0%;
+      margin-right: 0%;
+      font-size: 5vw;
+      white-space: normal;
+      
+    }
+    .Anwsertext{
+      font-size: 4vw;
+     }
+
+  }

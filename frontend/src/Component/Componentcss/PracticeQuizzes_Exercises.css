@@ -1,4 +1,4 @@
-.Headertext{
+.HeadertextPractice{
     color: #FFFFFF;
     font-family: 'Nunito';
     white-space: nowrap;
@@ -16,22 +16,47 @@
   margin-bottom: 5%;
   height: 3px;
 }
+.ContainerforQuestion{
+  color: #0D0E11;
+  font-family: 'Nunito';
+  white-space: nowrap;
+  font-size: 2vw;
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-top: 2%;
+  background-color: #32B07A;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+
+  .HeadertextPractice{
+      
+    font-size: 9vw;
+    white-space: normal;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .lineardividerQuiz{
+    margin-right: 0%;
+   margin-left: 0%
+  }
+  .ContainerforQuestion{
+    margin-left: 0%;
+    margin-right: 0%;
+    font-size: 3.4vw;
+    white-space: pre-wrap;  
+    border-radius: 4px;
+
+  }
+}
 
 
 
   
 
-  .ContainerforQuestion{
-    color: #0D0E11;
-    font-family: 'Nunito';
-    white-space: nowrap;
-    font-size: 2vw;
-    margin-left: 5%;
-    margin-right: 10%;
-    margin-top: 2%;
-    background-color: #32B07A;
-    border-radius: 10px;
-  }
+
   .Submitbutton{
     border: 2px solid transparent;
     background: 

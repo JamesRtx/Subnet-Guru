@@ -22,7 +22,7 @@ return (
 
 <div className='container'>
 
-<img src={Homepageimage} alt="Nature" className="responsive" />
+<img src={Homepageimage} alt="Nature" className="responsivehomepage" />
 
   <div class="top-lefttext">   <h1 className="Sectiontext">Understanding Subnetting in Minutes<br/>
   Learn & Calculate Instantly: Your One-Stop Guide to Subnet Masks</h1></div>

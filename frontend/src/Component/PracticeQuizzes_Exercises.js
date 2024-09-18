@@ -24,10 +24,9 @@ const OnchangeShowAnwser = (id) => {
 }
 
     return(<div>
-        <h1 className='Headertext'>Take a Quick Quiz to Test Your Subnetting Skills!</h1>
+        <h1 className='HeadertextPractice'>Take a Quick Quiz to Test Your Subnetting Skills!</h1>
         
-        <br/>
-        <br/>
+   
         <div className='lineardividerQuiz'></div>
         {QuestionsAndAnswer.map(Quizz => {
             return (
@@ -51,13 +50,13 @@ const OnchangeShowAnwser = (id) => {
         </div>
     )      })}
     
-
+    {Answerlist[Quizz.id] ? (<div style={{color:"white" , whiteSpace:"pre-line"}}>{Quizz.answer}</div>):(<div></div>)}  
     <br/>
     <Button  className='Submitbutton' variant="primary"  onClick={()=>{OnchangeShowAnwser(Quizz.id)}} >
              Answer?
            </Button>
 
-           {Answerlist[Quizz.id] ? (<div style={{color:"white" , whiteSpace:"pre-line"}}>{Quizz.answer}</div>):(<div></div>)}  
+           
 
             </div>     
 

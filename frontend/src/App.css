@@ -4,8 +4,15 @@ top: 0;
 bottom:0;
 right: 0;
 left: 0;
-position: sticky;
+position: fixed;
+margin :0;
 }
+.content{
+  position: relative; 
+  padding: 20px; 
+
+}
+
 .Navigationbar{
   height: 80px;
   position: relative;
@@ -20,9 +27,40 @@ font-size: 1.4vw;
 
 .Brandlogo {
   width: 100%;
-  max-width: 150px;
-  height: auto;
+  max-width: 150px;  
+  height: auto;   
+  margin: 20px ;
+}
+
+@media (max-width: 768px) {
+  .Brandlogo {
+    max-width: 120px; 
+    margin: 10px auto; 
   }
+}
+
+.Containerchecker{
+  background-color:#32B07A ;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 0.4vh;
+  
+      }
+
+@media (max-width: 480px) {
+  .Brandlogo {
+    max-width: 100px; 
+    margin: 5px auto; 
+  }
+  .Containerchecker{
+
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  
+}
 
 
 
@@ -32,8 +70,24 @@ font-size: 1.4vw;
 position: relative;
 top: 20px;
 margin-right: 150px;
-
-
+}
+@media (max-width: 1200px) {
+  .testingclass{
+    margin-right: 10%;
+  }
+  .Navigationtext{
+    font-size: 6vw;
+  }
+  .testingclass:hover{
+    background-color:0;
+  }
+  .navcollapse{
+    background: linear-gradient(#001012, #006B78);
+    padding: 15px ;
+    border-radius: 10px ;
+    border: 1px solid #333 !important; /* Border for better visibility */
+  
+  }
 }
 
 .testingclass:hover{
@@ -52,14 +106,9 @@ margin-right: 150px;
 
 
 
-  .Containerchecker{
-background-color:#32B07A ;
-margin-right: 80px;
-margin-left: 80px;
-margin-top: 8px;
-height: 3px;
 
-    }
+
+
   
 
 

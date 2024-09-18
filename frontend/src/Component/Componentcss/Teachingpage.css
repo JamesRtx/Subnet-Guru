@@ -1,10 +1,19 @@
-.Headertext{
+.HeadertextTeachingpage{
     color: #FFFFFF;
     font-family: 'Nunito';
     white-space: nowrap;
     font-size: 4vw;
     margin-left: 5%;
     margin-top: 5%;
+  }
+  .lineardividerteaching{
+    background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
+  margin-right: 5%;
+  margin-left: 5%;
+  height: 0.4vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
   }
   .Subsectiontext{
     color: #32B07A;
@@ -14,25 +23,55 @@
     margin-left: 5%;
     margin-top: 2%;
   }
-.paragraphtext{
+  .paragraphtext{
     color: #FFFFFF;
     font-family: 'Nunito';
     font-size: 1.8vw;
     margin-left: 5%;
     margin-right: 5%;
-
     margin-top: 2%;
   }
+  .Classfull{
+    margin: 10px;
+    font-size: 1.6vw;
+  }
+  @media (max-width: 480px) {
 
-.lineardividerteaching{
-  background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
-  margin-right: 80px;
-  margin-left: 80px;
-  margin-top: 1%;
-  margin-bottom: 5%;
-  height: 3px;
+    .HeadertextTeachingpage{
+      
+      font-size: 9vw;
+      white-space: normal;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .Subsectiontext{
+      font-size: 8vw;
+      white-space: normal;
+      margin-left: 0%;
+      margin-top: 0%;
+    }
+    .lineardividerteaching{
+      margin-right: 0%;
+     margin-left: 0%
+    }
+    .paragraphtext{
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 5vw;
+      white-space: pre-wrap;
+    
+    }
+    .Classfull{
+      margin: 0px;
+      font-size: 5vw;
+    }
 
-}
+    
+  }
+
+
+
+
 
 .container {
   position: relative;
@@ -44,4 +83,5 @@
   height: auto;
   }
   
+
 

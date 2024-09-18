@@ -8,10 +8,12 @@
 }
 
 
-.responsive {
+.responsivehomepage {
 width: 100%;
-height: auto;
+height: 75vh;
 }
+
+
 
 
 
@@ -43,5 +45,29 @@ height: auto;
     font-family: 'Nunito';
     white-space: nowrap;
     font-size: 3vw;
+  }
+  @media (max-width: 480px) {
+
+    .Sectiontext{
+      white-space: normal;
+      font-size: 6vw;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-100%, -50%);
+      left: 100%;
+    }
+  
+    .responsivebutton {
+      width: 70%;
+      height: auto;
+      }
+      .top-leftbutton {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        left: 33%;
+    }
   }
 

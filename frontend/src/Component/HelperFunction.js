@@ -98,7 +98,6 @@ function Rangeusableipaddress(ipadddress,subnetmask){
                 }
                 bits = bits-1
             }
-            console.log(decimalnumberofhost,counter, "workinga",tempaccumulatorforipaddress)
             if(decimalnumberofhost==0){
                 endingipaddress+=convertbinarytodecimal(tempaccumulatorforipaddress)
                 broadcastadress+=convertbinarytodecimal(tempaccumulatorforipaddress)
@@ -325,5 +324,59 @@ function getUsableHostnumberbysubnetmask(Subnetmask){
     return Usablehosts
 
 }
+function NumericChecker(value){ // checks if value is a numeric
+for(const item  in value){
+let count =0 ;
+    for(let i = 0; i<=9; i++){
+        if(value[item]==i){
+        count++
+        break
+        }
+    }
+    if(count==0){
+        return false
+    }
+}
+    return  true;
 
-export {Samesubnetidentifer,getNetworkid,Rangeusableipaddress,convertbinarytodecimal,getMinimumUsableaddressbysubntemask,convert_Cidrnotaiontosubnetmaskbinaryform,convertsubnetmaskbinaryformto_Cidrnotaion,convertsubnetmaskdecimalformto_Cidrnotaion,convertwacktoSubnetmaskbinary,findmostefficentwacknumber,convertbinarysubnetmakstodecimal,convertdecimalsubnetmakstobinary,getUsableHostnumberbysubnetmask}
+}
+function sizeofString(word){
+    let count =0;
+for (const key in word) {
+count++
+}
+return count;
+}
+function validipaddressorsubnet(value){
+let count =0;
+
+let sizeofword = sizeofString(value)
+let tempaccumulator= "";
+for (const key in value) {
+if(NumericChecker(value[key]) || value[key]=='.'){
+    if(value[key]!='.'){
+        tempaccumulator+=value[key]
+    }
+    
+if(value[key]=='.' ||  key==(sizeofword-1)){
+        if(tempaccumulator>255){
+            return ["Oops! One of the numbers seems too high. Each part of the IP address and subnet mask should be between 0 and 255 (e.g., 192.168.1.1 and 255.255.255.0).",false];
+            break ;
+        }
+
+        tempaccumulator=""
+
+}
+
+}
+else{
+   return ["Oops! It looks like there’s an issue with your input. Please enter a valid IP address and subnet mask using only numbers and dots (e.g., 192.168.1.1 and 255.255.255.0).",false];
+    break ;
+}
+
+
+}
+
+return ["",true];
+}
+export {Samesubnetidentifer,getNetworkid,Rangeusableipaddress,convertbinarytodecimal,getMinimumUsableaddressbysubntemask,convert_Cidrnotaiontosubnetmaskbinaryform,convertsubnetmaskbinaryformto_Cidrnotaion,convertsubnetmaskdecimalformto_Cidrnotaion,convertwacktoSubnetmaskbinary,findmostefficentwacknumber,convertbinarysubnetmakstodecimal,convertdecimalsubnetmakstobinary,getUsableHostnumberbysubnetmask,NumericChecker,validipaddressorsubnet}

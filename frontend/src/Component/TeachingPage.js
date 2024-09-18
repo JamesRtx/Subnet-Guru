@@ -19,9 +19,8 @@ const Teachingpage =() => {
 
     return ( <div>
 
-<h1 className='Headertext'>Relax, it’s only ONES and ZEROS!</h1>
-<br/>
-<br/>
+<div className='HeadertextTeachingpage'>Relax, it’s only ONES and ZEROS!</div>
+
 <div className='lineardividerteaching'>
 </div>
 
@@ -74,8 +73,9 @@ To illustrate:
         <p className='paragraphtext'>
         Classful addressing was the original method used to allocate IP addresses and organize networks. This system divided the IP address space into predefined classes with fixed boundaries. While these classes simplified network management, they had significant limitations, especially as the internet expanded and the demand for IP addresses increased. Classful addressing classified IP addresses into five classes (A, B, C, D, and E), each designed to serve different types of networks, from large global enterprises to small local networks.
 <br/>
+<div className='Classfull'>
     <h3>Class A :</h3>
-            <ul style={{margin:"10px" ,fontSize:'1.6vw'}}>
+            <ul >
                 <li>Range of the First Octet: From 1 to 127</li>
                 <li>Address Range: 1.0.0.0 to 126.0.0.0</li>
                 <li>Purpose: Designed for very large networks, such as major organizations, large corporations, or even entire countries. Class A networks can accommodate a vast number of devices.</li>
@@ -83,14 +83,14 @@ To illustrate:
             </ul> 
         
     <h3>Class B :</h3>
-    <ul style={{margin:"10px" ,fontSize:'1.6vw'}}>
+    <ul >
         <li>Range of the First Octet: From 128 to 191</li>
         <li>Address Range: 128.0.0.0 to 191.255.0.0</li>
         <li>Purpose: Suitable for medium-sized networks, such as universities, large businesses, or regional networks. Class B networks offer a balance between the number of available networks and the number of hosts per network.        </li>
         <li>Subnet Mask: 255.255.0.0</li>
     </ul> 
     <h3>Class C :</h3>
-    <ul style={{margin:"10px" ,fontSize:'1.6vw'}}>
+    <ul >
         <li>Range of the First Octet: From 192 to 223</li>
         <li>Address Range: 192.0.0.0 to 223.255.255.0</li>
         <li>Purpose: Intended for smaller networks, such as small businesses, local area networks (LANs), or home networks. Class C networks provide a sufficient number of IP addresses for smaller organizations.        </li>
@@ -98,21 +98,22 @@ To illustrate:
     </ul> 
 
     <h3>Class D :</h3>
-    <ul style={{margin:"10px" ,fontSize:'1.6vw'}}>
+    <ul >
         <li>Range of the First Octet: From 224 to 239</li>
         <li>Address Range: 224.0.0.0 to 239.255.255.255</li>
         <li>Purpose: Reserved for multicasting. Class D addresses are used to send data to multiple devices simultaneously rather than to individual hosts. This class is not used for regular network communication.        </li>
     </ul> 
     
     <h3>Class E :</h3>
-    <ul style={{margin:"10px" ,fontSize:'1.6vw'}}>
+    <ul>
         <li>Range of the First Octet: From 240 to 255</li>
         <li>Address Range: 240.0.0.0 to 255.255.255.255</li>
         <li>Purpose: Reserved for experimental purposes and future use. Class E addresses are not used in standard network communication and are reserved for research and experimental applications.
         </li>
     </ul> 
-
+</div>
         </p>
+        
 <div className='lineardividerteaching'>
     </div>
     <h2 className='Subsectiontext'>Subnetting with Classless Inter-Domain Routing (CIDR)</h2>
