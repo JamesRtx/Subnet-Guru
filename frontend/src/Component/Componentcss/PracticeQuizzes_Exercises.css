@@ -10,11 +10,11 @@
 
 .lineardividerQuiz{
   background-image: linear-gradient(to right, #165B10 34% ,#2DBA21 54%, #2FC122 100%);
-  margin-right: 80px;
-  margin-left: 80px;
-  margin-top: 1%;
-  margin-bottom: 5%;
-  height: 3px;
+  margin-right: 5%;
+  margin-left: 5%;
+  height: 0.4vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .ContainerforQuestion{
   color: #0D0E11;

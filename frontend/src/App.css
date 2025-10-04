@@ -78,9 +78,7 @@ margin-right: 150px;
   .Navigationtext{
     font-size: 6vw;
   }
-  .testingclass:hover{
-    background-color:0;
-  }
+
   .navcollapse{
     background: linear-gradient(#001012, #006B78);
     padding: 15px ;
@@ -92,8 +90,8 @@ margin-right: 150px;
 
 .testingclass:hover{
   position: relative;
-  background-color:#32B07A;
-  border-radius: 10px;
+  background: linear-gradient(#001012, #004851,#006B78);
+  border-radius: 5px;
 }
 
 .testing{

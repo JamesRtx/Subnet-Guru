@@ -138,7 +138,7 @@ const ValidateInput= (Numberofhost,ipadddress,Subnetmask,ipadddress2="") => {
 }
 
 const handleSubmitforHosttoSubnetCalculator = e => {
-    e.preventDefault();   
+      
     let validated = ValidateInput(Numberofhost)
     if(validated[1]==false){
         seterrormessage(validated[0])
@@ -169,7 +169,6 @@ const handleSubmitforHosttoSubnetCalculator = e => {
 const handleSubmitofHostRangeUsabilityChecker = () => {
     let validated = ValidateInput(false,HostRangeUsabilityipaddress,HostRangeUsabilitySubnetmask)
     if(validated[1]==false){
-        console.log(validated[0])
         seterrormessage(validated[0])
         seterrormessageid("2")
         return ;
@@ -192,7 +191,6 @@ const handleSubmitofHostRangeUsabilityChecker = () => {
 const handleSubmitBroadcastAddressCalculator= () => {
    let validated = ValidateInput(false,BroadcastAddressCalculatoripaddress,BroadcastAddressCalculatorsubnetmask)
     if(validated[1]==false){
-        console.log(validated[0])
         seterrormessage(validated[0])
         seterrormessageid("3")
         return ;
@@ -209,7 +207,6 @@ const handleSubmitBroadcastAddressCalculator= () => {
 const handleSubmitCIDRNotationFinder= () => {
     let validated = ValidateInput(false,false,CIDRNotationFindersubnetmask)
     if(validated[1]==false){
-        console.log(validated[0])
         seterrormessage(validated[0])
         seterrormessageid("4")
         return ;
@@ -225,7 +222,6 @@ const handleSubmitCIDRNotationFinder= () => {
 const handleSubmitSameNetworkIdentifier= () => {
     let validated = ValidateInput(false,SameSubnetCheckeripaddress1,SameSubnetCheckersubnetmask,SameSubnetCheckeripaddress2)
     if(validated[1]==false){
-        console.log(validated[0])
         seterrormessage(validated[0])
         seterrormessageid("5")
         return ;
@@ -243,7 +239,6 @@ const handleSubmitSameNetworkIdentifier= () => {
    const handleSubmitNetworkIdentifier = () => {
     let validated = ValidateInput(false,IPNetworkIdentifieripadress,IPNetworkIdentifiersubnetmask)
     if(validated[1]==false){
-        console.log(validated[0])
         seterrormessage(validated[0])
         seterrormessageid("6")
         return ;
@@ -255,6 +250,8 @@ const handleSubmitSameNetworkIdentifier= () => {
     setIPNetworkIdentifiernetworkid(Neworkid)
     Setsubmitted6(true)
    }
+
+
 
 
 return (
@@ -282,16 +279,22 @@ Enter the number of usable hosts you need, and the tool will display the differe
                 placeholder="Example: 28"
                 value={Numberofhost}
                 onChange={onChangeNummberofhost}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter') {
+                      event.preventDefault(); // Prevents form submission
+                    }
+                  }}    
                 />
                 </div>
     </Form.Group>
 <br/>
-<p>{errormessageid=="1"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
+
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitforHosttoSubnetCalculator}>
              Submit
            </Button>
 </Form>
 </div> 
+<p>{errormessageid=="1"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 <br/>
 
 {Submited1 ? 
@@ -361,7 +364,7 @@ To determine the minimum number of hosts and the range of usable IP addresses, p
 </Form.Group>
 
 <br/>
-<p>{errormessageid=="2"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
+
 
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitofHostRangeUsabilityChecker}>
              Submit
@@ -370,6 +373,7 @@ To determine the minimum number of hosts and the range of usable IP addresses, p
 
 
 </div>
+<p className='error' >{errormessageid=="2"? (<p >{errormessage}</p>) : (<div></div>)   }</p>
 <br/>
 {Submited2 ? 
 ( 
@@ -426,15 +430,15 @@ To find the broadcast address for a given subnet, click on the form and enter th
              </div>
 </Form.Group>
 <br/>
-<p>{errormessageid=="3"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitBroadcastAddressCalculator}>
              Submit
            </Button>
+           
 </Form>
-
-
 </div>
+<p className='error' >{errormessageid=="3"? (<p >{errormessage}</p>) : (<div></div>)   }</p>
+
 <br/>
 {Submited3 ? 
 ( 
@@ -470,11 +474,15 @@ To determine the subnet size in CIDR notation, click on the form and enter the s
             placeholder="255.255.0.0"
              value={CIDRNotationFindersubnetmask}
              onChange={OnChangeCIDRNotationFinder}
+             onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                  event.preventDefault(); // Prevents form submission
+                }
+              }}
              />
              </div>
 </Form.Group>
 <br/>
-<p>{errormessageid=="4"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitCIDRNotationFinder}>
              Submit
            </Button>
@@ -483,6 +491,8 @@ To determine the subnet size in CIDR notation, click on the form and enter the s
 
 
 </div>
+<p>{errormessageid=="4"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
+
 <br/>
 {Submited4 ? 
 ( 
@@ -514,7 +524,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
     <Form.Control
     style={{border:'2px solid green'}}
             type="text"
-            placeholder="Example: 28"
+            placeholder="192.168.1.1"
              value={SameSubnetCheckeripaddress1}
              onChange={OnChangeSameSubnetCheckeripaddress1}
              />
@@ -526,7 +536,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
     <Form.Control
     style={{border:'2px solid green'}}
             type="text"
-            placeholder="Example: 28"
+            placeholder="192.168.1.1"
              value={SameSubnetCheckeripaddress2}
              onChange={OnChangeSameSubnetCheckeripaddress2}
              />
@@ -538,7 +548,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
     <Form.Control
     style={{border:'2px solid green'}}
             type="text"
-            placeholder="Example: 28"
+            placeholder="255.255.255.0"
              value={SameSubnetCheckersubnetmask}
              onChange={OnChangeSameSubnetCheckersubnetmask}
              />
@@ -546,7 +556,6 @@ To determine if two IP addresses are in the same subnet, click on the form and e
 </Form.Group>
 
 <br/>
-<p>{errormessageid=="5"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitSameNetworkIdentifier}>
              Submit
@@ -555,6 +564,7 @@ To determine if two IP addresses are in the same subnet, click on the form and e
 
 
 </div> 
+<p>{errormessageid=="5"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 
 <br/>
 {Submited5 ? 
@@ -585,7 +595,7 @@ To determine the network ID, please click on the form and enter the IP address a
     <Form.Control
     style={{border:'2px solid green'}}
             type="text"
-            placeholder="Example: 28"
+            placeholder="192.168.1.1"
              value={IPNetworkIdentifieripadress}
              onChange={OnChangeIPNetworkIdentifieripadress}
              />
@@ -599,19 +609,20 @@ To determine the network ID, please click on the form and enter the IP address a
     <Form.Control
     style={{border:'2px solid green'}}
             type="text"
-            placeholder="Example: 28"
+            placeholder="255.255.255.0"
              value={IPNetworkIdentifiersubnetmask}
              onChange={OnChangeIPNetworkIdentifiersubnetmask}
              />
              </div>
 </Form.Group>
 <br/>
-<p>{errormessageid=="6"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
 <Button  className='Submitbuttoncalc' variant="primary" onClick={handleSubmitNetworkIdentifier}>
              Submit
            </Button>
 </Form>
 </div>
+<p>{errormessageid=="6"? (<p className='error'>{errormessage}</p>) : (<div></div>)   }</p>
+
 <br/>
 
 {Submited6 ? 
