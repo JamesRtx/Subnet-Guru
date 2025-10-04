@@ -15,7 +15,7 @@ import PracticeQuizzes_Exercises from './Component/PracticeQuizzes_Exercises.js'
 import FAQ from './Component/FAQpage.js'
 import Container from 'react-bootstrap/esm/Container.js';
 
-function App() {
+function    App() {
   return (
     <div>    
       <div className="Websitebackground"></div>
@@ -56,6 +56,8 @@ function App() {
  <Route path="/Teaching-Page" element={<Teachingpage/>}></Route>
  <Route path="/PracticeQuizzes_Exercises" element={<PracticeQuizzes_Exercises/>}> </Route>
  <Route path="/FAQ" element={<FAQ/>}> </Route>
+ <Route path="/" element={<Homepage/>}></Route>
+  <Route path="*" element={<Homepage/>}></Route>
 
  </Routes>
 
